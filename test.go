@@ -17,5 +17,5 @@ func main() {
 
 	f := "apple";
 	fmt.Println(f);
-	
+
 }
