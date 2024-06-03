@@ -3,30 +3,26 @@ package main
 import "fmt"
 
 func main() {
-	i := 1;
 
-	for i <= 3 {
-		fmt.Println(i);
-		i = i + 1;
+	if 7%2 == 0 {
+		fmt.Println("7 is even");
+	} else {
+		fmt.Println("7 is odd");
 	}
 
-	for j := 0; j < 3; j++ {
-		fmt.Println(j);
+	if 8 % 4 == 0 {
+		fmt.Println("8 is divisible by 4");
+	} 
+
+	if 8 % 2 == 0 || 7 % 2 == 0 {
+		fmt.Println("either 8 or 7 are even");
 	}
 
-	for i := range 3 {
-		fmt.Println("range", i);
-	}
-
-	for {
-		fmt.Println("loop");
-		break;
-	}
-
-	for n := range 6 {
-		if n % 2 == 0 {
-			continue;
-		}
-		fmt.Println(n);
+	if num := 9; num < 0 {
+		fmt.Println("num is negative");
+	} else if num < 10 {
+		fmt.Println(num, "num has one digit");
+	} else {
+		fmt.Println(num, "has multiple digits");
 	}
 }
