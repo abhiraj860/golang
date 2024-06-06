@@ -10,13 +10,10 @@ func f2() (int, int) {
 
 
 func main() {
-	x := 0
-	increment := func() int {
-		x++
-		return x
+	add := func(x, y int) int {
+		return x + y
 	}
-	fmt.Println(increment())
-	fmt.Println(increment())
+	fmt.Println(add(1, 2))
 }
 
 func average(xs [] float64) float64 {
