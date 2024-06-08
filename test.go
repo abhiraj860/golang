@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-func recov() {
-	str := recover()
-	fmt.Println(str)
+func zero(xPtr *int) {
+	*xPtr = 0
 }
 
 func main() {
-	defer recov () 
-	panic("PANIC")
+	x := 5
+	zero(&x)
+	fmt.Println(x)
 }
