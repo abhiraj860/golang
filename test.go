@@ -2,13 +2,12 @@ package main
 
 import "fmt"
 
-func factorial(x uint) uint {
-	if x == 0 {
-		return 1
-	}
-	return x * factorial(x - 1)
-} 
+func recov() {
+	str := recover()
+	fmt.Println(str)
+}
 
 func main() {
-	fmt.Println(factorial(4))
+	defer recov () 
+	panic("PANIC")
 }
